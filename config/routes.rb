@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  get 'user/new'
+  get 'users/new'
   root 'common_pages#home'
   get '/help',    to: 'common_pages#help'
   get '/about',   to: 'common_pages#about'
   get '/contact', to: 'common_pages#contact'
-  get '/signup',  to: 'user#new'
+  get '/signup',  to: 'users#new'
+  resources :users
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
